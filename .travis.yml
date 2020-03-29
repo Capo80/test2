@@ -1,0 +1,10 @@
+language: java
+
+addons:
+  sonarcloud:
+    organization: "pippopaperino"
+    token:
+	secure: "Yp3BCMmNCLLOa4L30b3bAl5g247e8YJpIHADZnenjgJQifhAC08X4HzSywNwT5gJH4x/17lO5/H6RJ2wXI2lcEPz6WLOTa8SSrxpmP9zL493ywDjw/OPsQdk6iyz9XmeQr5UU8wUrDfgCsTNih567MI+TTUs5o0wu3x6D4hU2LzASq1YASsQ6525pl68bfGbqCtmcwmuTBhLoL3Ya6q5hTOZd1bfxPVRM+FnM0kmemX0vmGIEGfTKFJMWIRJBciU/OeF/ZHojLjHIKNRRPN2TH66sS5EAH8hnRl8DENUuO2G106vpTyYluyy+opJkPvUlDhhDwKAshjgrSVaBtUXJBqK0k2F39l/FMR4AEUELOCzR4FkiFeyu7P6482+RBQwGFa2QFj6TtAKt1zhCx1h6ajrbxH2B8qNRb2Hj2zzdndYwsZYxTE4BYM9/Sno4QP6YpHCFSVA30hgNBU9iFR0manZU5km1xmtakg8OECnyeJw/ldLVDL+tfJ6UYa1Xmv0xCerRbx7VXGbT0Lis3IFlPVagF2yZr6NJqEepvCKqolAKreunsARuDz9rSEHqJo8ELOlsnFVlwkYNp/fmZz5pFzy6SrZcnRfWEbq+mOHfh8rFWdOb8w1sIVSS5iC4NJGN0hbvbQ8px3/Y5+NGMYC1TWhBbyRxTbKw6QPI7o0c28="
+
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
