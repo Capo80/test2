@@ -11,4 +11,4 @@ addons:
 script:
   -ant build
 script:
-  -sonar-scanner
+  - sonar-scanner
